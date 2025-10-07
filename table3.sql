@@ -71,7 +71,8 @@ LEFT JOIN pays ON villes.fk_pays_id = pays.pays_id;
 
 SELECT
     rollercoasters.nom AS ROLLERCOASTER,
-    elements.nom AS ELEMENT
+    elements.nom AS ELEMENT,
+    composition.nombre AS "Nombre"
 FROM
     rollercoasters
 INNER JOIN composition ON rollercoasters.rollercoaster_id = composition.fk_rollercoaster_id
