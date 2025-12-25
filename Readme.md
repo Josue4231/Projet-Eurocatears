@@ -45,6 +45,8 @@ La solution repose sur une **base relationnelle normalisée**, cohérente et év
 
 📷 *Aperçu du MCD*  
 ![MCD Eurocoasters](./images/MCD.png)
+<img width="636" height="566" alt="image" src="https://github.com/user-attachments/assets/96326c71-e27e-444d-bbfb-bd9430d63b9d" />
+
 
 ---
 
