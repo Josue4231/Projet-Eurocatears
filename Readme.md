@@ -44,7 +44,6 @@ La solution repose sur une **base relationnelle normalisée**, cohérente et év
 - Diagramme UML réalisé avec **PlantUML**
 
 📷 *Aperçu du MCD*  
-![MCD Eurocoasters](./images/MCD.png)
 <img width="636" height="566" alt="image" src="https://github.com/user-attachments/assets/96326c71-e27e-444d-bbfb-bd9430d63b9d" />
 
 
@@ -56,7 +55,8 @@ La solution repose sur une **base relationnelle normalisée**, cohérente et év
 - Respect des règles de normalisation
 
 📷 *Schéma relationnel*  
-![MLD Eurocoasters](./images/MLD.png)
+<img width="636" height="469" alt="image" src="https://github.com/user-attachments/assets/6501652e-bfa6-4e3f-9295-6de4472347c7" />
+
 
 ---
 
@@ -67,7 +67,6 @@ La solution repose sur une **base relationnelle normalisée**, cohérente et év
 - Visualisation du schéma avec **DBeaver**
 
 📷 *Schéma physique (DBeaver)*  
-![MPD Eurocoasters](./images/MPD.png)
 
 ---
 
