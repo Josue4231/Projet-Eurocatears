@@ -1,40 +1,152 @@
-# 🎢 Mini-Projet : Eurocoasters
+# 🎢 Eurocoasters — Projet SQL & Modélisation de Base de Données
 
-## 🧠 Contexte
-Le projet **Eurocoasters** a pour objectif de concevoir une **base de données relationnelle** sur les montagnes russes (rollercoasters) d’Europe.  
-Ce mini-projet permet de découvrir l’ensemble du processus de conception d’une base de données, de la modélisation à la mise en œuvre SQL.
-
----
-
-## 🏗️ Étapes du projet
-
-### 1. Modélisation Conceptuelle des Données (MCD)
-- Identification des **entités** principales : pays, villes, parcs, constructeurs, rollercoasters, éléments, fréquentations.
-- Définition des **relations** entre entités et des **cardinalités**.
-- Réalisation du diagramme UML avec **PlantUML** sous **Visual Studio Code**.
-
-### 2. Modélisation Logique des Données (MLD)
-- Transformation du MCD en modèle relationnel.
-- Définition des **clés primaires et étrangères**.
-- Spécification des types SQL (`VARCHAR`, `INT`, `DATE`, etc.).
-- Utilisation d’un **diagramme E-R** pour la visualisation.
-
-### 3. Modélisation Physique des Données (MPD)
-- Implémentation du schéma dans une base de données **MariaDB**.
-- Création des tables et des relations via des **requêtes SQL**.
-- Insertion des données réelles sur les **parcs d’attractions européens** et leurs fréquentations.
-- Visualisation du schéma avec **DBeaver**.
+**Eurocoasters** est un projet de conception et d’implémentation d’une **base de données relationnelle** dédiée aux **montagnes russes et parcs d’attractions européens**.  
+Il couvre l’ensemble du cycle de vie d’une base de données : **analyse, modélisation (MCD / MLD / MPD) et implémentation SQL sous MariaDB**.
 
 ---
 
-## 🧩 Compétences mises en œuvre
-- Conception de base de données (MCD, MLD, MPD)
-- Utilisation de **PlantUML**, **SQL** et **MariaDB**
-- Maîtrise d’outils professionnels : **VS Code** et **DBeaver**
-- Compréhension du modèle relationnel et de la modélisation de données
+## 👨‍💻 Profil du projet
+
+- **Type** : Projet académique / Portfolio
+- **Spécialité** : Bases de données relationnelles
+- **SGBD** : MariaDB
+- **Langage** : SQL
+- **Outils** : PlantUML, DBeaver, Visual Studio Code
+- **Objectif** : Démontrer une maîtrise complète de la modélisation et du SQL
 
 ---
 
-## 🎯 Objectif
-Mettre en pratique la **modélisation complète d’une base de données**, de la théorie à l’application concrète, en s’appuyant sur un thème ludique et structuré : les parcs d’attractions et montagnes russes d’Europe.
+## 🧠 Problématique
 
+Comment structurer efficacement des données complexes liées à :
+- des **parcs d’attractions européens**,
+- leurs **rollercoasters**,
+- les **constructeurs**,
+- les **éléments techniques**,
+- la **localisation géographique**,
+- et les **données de fréquentation annuelle** ?
+
+La solution repose sur une **base relationnelle normalisée**, cohérente et évolutive.
+
+---
+
+## 🗂️ Modélisation des données
+
+### 📐 Modélisation Conceptuelle (MCD)
+- Identification des entités métier :
+  - Pays, Villes
+  - Parcs d’attractions
+  - Rollercoasters
+  - Constructeurs
+  - Éléments techniques
+  - Fréquentation
+- Définition des relations et cardinalités
+- Diagramme UML réalisé avec **PlantUML**
+
+📷 *Aperçu du MCD*  
+![MCD Eurocoasters](./images/MCD.png)
+
+---
+
+### 🔗 Modélisation Logique (MLD)
+- Transformation du MCD en **schéma relationnel**
+- Définition des **clés primaires et étrangères**
+- Respect des règles de normalisation
+
+📷 *Schéma relationnel*  
+![MLD Eurocoasters](./images/MLD.png)
+
+---
+
+### 🛢️ Modélisation Physique (MPD)
+- Implémentation sous **MariaDB**
+- Création des tables et contraintes d’intégrité
+- Insertion de données réelles
+- Visualisation du schéma avec **DBeaver**
+
+📷 *Schéma physique (DBeaver)*  
+![MPD Eurocoasters](./images/MPD.png)
+
+---
+
+## 🧪 Implémentation SQL
+
+Le projet comprend :
+- Création de la base de données
+- Tables relationnelles avec clés primaires et étrangères
+- Contraintes d’intégrité référentielle
+- Relations **1–N** et **N–N**
+
+📄 Exemple d’implémentation SQL :
+
+```sql
+CREATE DATABASE bd_eurocoasters_jkialengel;
+USE bd_eurocoasters_jkialengel;
+
+CREATE TABLE pays (
+  pays_id INT AUTO_INCREMENT PRIMARY KEY,
+  nom VARCHAR(30) NOT NULL
+);
+
+CREATE TABLE villes (
+  ville_id INT AUTO_INCREMENT PRIMARY KEY,
+  nom VARCHAR(30),
+  fk_pays_id INT,
+  FOREIGN KEY (fk_pays_id) REFERENCES pays(pays_id)
+  ON DELETE SET NULL
+  ON UPDATE CASCADE
+);
+```
+👉 Le script complet est disponible dans le dépôt.
+
+---
+
+## 🧩 Compétences démontrées
+##Bases de données & SQL
+
+Analyse des besoins métier
+Modélisation MCD / MLD / MPD
+Normalisation des données
+Gestion des clés et contraintes
+Écriture de scripts SQL structurés
+
+##Outils professionnels
+
+PlantUML (diagrammes UML)
+DBeaver (visualisation et gestion DB)
+MariaDB
+Visual Studio Code
+
+##Méthodologie
+
+Démarche rigoureuse et documentée
+Passage de la théorie à l’implémentation
+Organisation claire du projet
+
+## 🎯 Objectifs du projet
+
+Mettre en pratique la conception complète d’une base de données
+Appliquer les bonnes pratiques SQL
+Comprendre les enjeux d’un système relationnel réel
+Présenter un projet structuré dans un portfolio data / back-end
+
+## 🔮 Évolutions possibles
+
+Ajout de vues et procédures stockées
+Statistiques avancées de fréquentation
+Historisation multi-années
+Connexion à une application front-end
+Migration vers PostgreSQL
+
+## 📁 Dépôt GitHub
+
+🔗 https://github.com/Josue4231/Projet-Eurocatears
+
+## 📬 Contact
+
+👤 Nom : Josue kialengela-tazi
+📧 Email : josuekialengela@gmail.com
+💼 Portfolio : https://josue4231.github.io/portfolio-de-Josue/
+🐙 GitHub : https://github.com/Josue4231
+
+Projet présenté dans un cadre académique et professionnel.
